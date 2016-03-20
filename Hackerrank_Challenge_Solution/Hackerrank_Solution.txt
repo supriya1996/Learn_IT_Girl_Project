@@ -1,0 +1,99 @@
+#Hackerrank Online Python Challenge solution
+
+
+#hello world
+
+print "Hello World!"
+
+#raw input
+
+name = raw_input("")
+print name 
+
+#arithmetic operator
+
+a = int(raw_input())
+b = int(raw_input())
+
+addition = a + b
+subtraction = a - b
+multiplication = a * b
+
+print a + b
+print subtraction
+print multiplication
+
+#python division
+
+from __future__ import division
+a = int(raw_input())
+b = int(raw_input())
+
+
+
+print a//b
+print a/b
+
+#python mod divmod
+
+a = int(raw_input())
+b = int(raw_input())
+
+print a // b
+print a % b
+print divmod(a,b)
+
+#	power -modpower
+
+a = int(raw_input())
+b = int(raw_input())
+m = int(raw_input())
+
+print pow(a,b)
+print pow(a,b,m)
+
+# Integer come in all size
+
+a = int(raw_input())
+b = int(raw_input())
+c = int(raw_input())
+d = int(raw_input())
+
+print pow(a,b) + pow(c,d)
+
+#what's ur name
+
+str1tr1 = raw_input("")
+str2 = raw_input("")
+
+print "Hello" + " " + str1 + " " + str2 + "!" + " " + "You just delved into python."
+
+#Interchange two number
+a = int(raw_input())
+b = int(raw_input())
+tuple = (b,a)
+print tuple[0]
+print tuple[1]
+
+
+#Finding the  percentage
+
+N = int(raw_input())
+dc = dict()
+lst1 = list()
+for i in range(N):
+    a = raw_input()
+    lst1 = a.split()
+    d = lst1[0]
+    lst1.remove(lst1[0])
+    newlst1 = list(map(float, lst1))
+    dc[d] = newlst1
+name = raw_input()
+total = 0
+if name in dc:
+    marks = dc[name]
+    no = len(marks)
+    for num in marks:
+        total += num
+avg = total / no
+print "%.2f" % avg
