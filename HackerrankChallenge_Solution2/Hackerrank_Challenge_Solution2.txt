@@ -1,0 +1,105 @@
+#Hackerrank Solution
+
+#tuple
+
+raw_input()
+print hash(tuple(map(int, raw_input().strip().split(" "))))
+
+#set symmetric
+
+raw_input()
+a=set(map(int,raw_input().split()))
+input()
+b=set(map(int,raw_input().split()))
+c=a.symmetric_difference(b)
+for n in sorted(list(c)):
+    print n
+
+#List Comprehensions
+
+x, y, z, n = int(raw_input()), int(raw_input()), int(raw_input()), int(raw_input())
+print ([[a,b,c] for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1) if a + b + c != n ])
+
+#Find Second Largest Number
+
+n = int(raw_input())
+nums = map(int, raw_input().split()) 
+print sorted(list(set(nums)))[-2]
+
+#Designer Door Mat
+
+N, M = map(int,raw_input().split())
+for i in range(1,N,2): 
+    print((".|."*i).center(M,"-"))
+print("WELCOME".center(M, '-'))
+for i in range(N-2,-1,-2): 
+    print((".|."*i).center(M,"-"))
+	
+#Text Wrap
+
+import textwrap 
+string = raw_input() 
+print textwrap.fill(string,int(raw_input())) 
+
+#Text Alignment Program
+
+
+#Replace all ______ with rjust, ljust or center. 
+
+thickness = int(raw_input()) #This must be an odd number
+c = 'H'
+
+#Top Cone
+for i in range(thickness):
+    print (c*i).rjust(thickness-1)+c+(c*i).ljust(thickness-1)
+
+#Top Pillars
+for i in range(thickness+1):
+    print (c*thickness).center(thickness*2)+(c*thickness).center(thickness*6)
+
+#Middle Belt
+for i in range((thickness+1)/2):
+    print (c*thickness*5).center(thickness*6)    
+
+#Bottom Pillars
+for i in range(thickness+1):
+    print (c*thickness).center(thickness*2)+(c*thickness).center(thickness*6)    
+
+#Bottom Cone
+for i in range(thickness):
+    print ((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).rjust(thickness*6)    
+
+#SwapCase
+
+str = raw_input()
+print str.swapcase()
+
+#String Split Join
+
+print "-".join(raw_input().split())
+
+#Mutation
+
+string = raw_input() 
+n = raw_input().split() 
+out = string[:int(n[0])] + n[1] + string[int(n[0])+1:] 
+print (out)
+
+#Find a String
+
+string = raw_input()
+sub_string = raw_input()
+i=0
+while string.find(sub_string)>-1:
+   string=string[string.find(sub_string)+1:]
+   i+=1
+print (i)
+
+#String Validator
+
+string = raw_input()
+print(any(c.isalnum() for c in string))
+print(any(c.isalpha() for c in string))
+print(any(c.isdigit() for c in string))
+print(any(c.islower() for c in string))
+print(any(c.isupper() for c in string))
